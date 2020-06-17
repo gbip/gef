@@ -5962,7 +5962,7 @@ class RemoteCommand(GenericCommand):
         elif arch.startswith("i386:intel"):
             current_elf.e_machine = Elf.X86_32
             current_arch = X86()
-        elif arch.startswith("i386:x86-64"):
+        elif arch.startswith("i386:x86-64") or arch.startswith("i386"):
             current_elf.e_machine = Elf.X86_64
             current_elf.e_class = Elf.ELF_64_BITS
             current_arch = X86_64()
